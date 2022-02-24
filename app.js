@@ -13,12 +13,17 @@ const displayUser = (user) => {
     div.style.border = "3px solid black";
     div.style.padding = "10px";
     div.style.margin = "10px";
-    div.innerHTML = `<h4>Name: ${user.name.title} ${user.name.first} ${user.name.last}</h4>
-                        <h4> Email: ${user.email}</h4>
-                        <h4>Gender: ${user.gender}</h4>
-                        <h4> Age: ${user.dob.age}</h4>
-                        <img src="${user.picture.large}">
+    div.innerHTML = `<div class="div">
+    <img class="image" src="${user.picture.large}">
+    <h4>Name: ${user.name.title} ${user.name.first} ${user.name.last}</h4>
+    <h4> Email: ${user.email}</h4>
+    <h4>Gender: ${user.gender}</h4>
+    <h4> Age: ${user.dob.age}</h4>
+    <h5>Phone: ${user.phone}</h5>
+    </div>
                         `;
+
     sectionUser.appendChild(div);
   }
+  console.log(user);
 };
